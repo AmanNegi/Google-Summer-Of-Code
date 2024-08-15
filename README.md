@@ -28,7 +28,58 @@ This project introduces an innovative Rocket.Chat application that allows commun
 
    
 
+## Demo
+
+### 1. OnInstallation Message:
+
+Once the user installs our app, they are introduced to our application with an introductory message. It entails the features of the applications and basic information to get started with our app. 
+
+https://github.com/user-attachments/assets/bbc428f5-ca11-4200-8bd8-2e0619a709fd
+
+### 2. Helper Message:
+
+The user can use the `/gen-gif help` command to get quick info about all the commands available in our app. This command assists users by providing the commands and a line explaining what does each command do.
+
+https://github.com/user-attachments/assets/24ca62cf-cc0b-40a9-b220-8da2c8a4d4a8
+
+### 3. Generate GIF from prompt:
+
+The user can use the `/gen-gif p <yourprompthere>` to generate GIF's directly from the provided prompt. This feature empowers **power users** who have knowledge about prompts, and are specific about the input that goes into the generation process. This command entails three major processes:
+
+1. The _prompt_ passed by the user firstly goes through a profanity filter to ensure that user entered a safe prompt. To identify profanity we use a prompt-tuned text-to-text LLM.
+2. Once, we are sure that the _prompt_ is safe, we pass the prompt to the GIF generation model through an API call.
+3. When the generation is complete we are notified via Webhooks, and we get notified via a message that our generation is complete. At this step we provide two action buttons(**send** & **regenerate**), we can choose to either regenerate the GIF or send the GIF.
+
+https://github.com/user-attachments/assets/b2e67786-20c9-4c74-809b-0a98225447ba
 
 
+### 4. Generate GIF from query:
+
+The user can use the `/gen-gif q <yourqueryhere` to generate GIF's using a query, the query in turn provides the user with a set of 4 prompts which the user can use to generate GIFs. This feature is for normal users, who don't have much prompting knowledge or don't wish to write a detailed prompt. This command entails 4 major processes:
+
+1. The _query_ passed by the user firstly goes through a profanity filter to ensure that the user entered a safe prompt.
+2. Once, we are sure that the _query_ is safe, we pass the query to the Prompt Generation LLM(another prompt-tuned text-to-text LLM). Which provides us a set of 4 prompts, which are optimized for GIF generation.
+3. The user can then select any of the 4 _prompts_ and then continue with the GIF generation process.
+4. When the generation is complete, we get a similar message as discussed in above command, the user can decide to either send the GIF or regenerate using the same command.
+
+https://github.com/user-attachments/assets/7cf327c2-0d4d-41a4-900e-5b6d4b6a6a10
+
+### 5. View Past Generations
+
+The user can use the `/gen-gif history <pagenumber>` to view the past generations. As we know, the generation of a GIF is time-consuming and takes up resources. It’s a good idea to store the generations locally so that the GIFs can be reused.
+
+#### Pagination in History:
+
+One issue we faced was that RC atmost shows 10 items in preview, meanwhile we wanted to show all the past generations. To resolve this issue, we went ahead and implemented pagination in history. The user can simply pass the `<pagenumber>` in the command and get the specific page of history.
+
+```
+> /gen-gif history 0/1 # return latest 10 items or the 1st page
+
+> /gen-gif history 2 # return the 2nd page
+
+> /gen-gif history <pagenumber> # pagenumber should be a number & pagenumber >= 0
+```
+
+https://github.com/user-attachments/assets/8a4ed577-d093-4397-9c21-b3da0fa734e4
 
 
