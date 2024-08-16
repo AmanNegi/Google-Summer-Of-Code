@@ -82,4 +82,63 @@ One issue we faced was that RC atmost shows 10 items in preview, meanwhile we wa
 
 https://github.com/user-attachments/assets/8a4ed577-d093-4397-9c21-b3da0fa734e4
 
+## Contributions
+
+### Pull Requests
+
+<div align="center">
+
+| PR Link   | Description  | Status | 
+| :-----------: | :------------------------------------:| :------:|
+| [PR #6](https://github.com/RocketChat/apps.ai.gif/pull/6) | <b> [CHORE] Initialise RC App</b>  | <img src="https://i.imgur.com/tskv8MM.png" width=55 height=40> |
+| [PR #7](https://github.com/RocketChat/apps.ai.gif/pull/7) | <b> [Feat] Generate GIF from chat directly </b>  | <img src="https://i.imgur.com/tskv8MM.png" width=55 height=40> |
+| [PR #8](https://github.com/RocketChat/apps.ai.gif/pull/8) | <b> [Feat] Enhance user query using LLM </b>  | <img src="https://i.imgur.com/tskv8MM.png" width=55 height=40> |
+| [PR #11](https://github.com/RocketChat/apps.ai.gif/pull/11) | <b> [Feat] Enable user to enter custom prompt </b>  | <img src="https://i.imgur.com/tskv8MM.png" width=55 height=40> |
+| [PR #12](https://github.com/RocketChat/apps.ai.gif/pull/12) | <b> [Feat] Allow users to view past generations </b>  | <img src="https://i.imgur.com/tskv8MM.png" width=55 height=40> |
+| [PR #13](https://github.com/RocketChat/apps.ai.gif/pull/13) | <b> [Feat] Add Profanity Filter </b>  | <img src="https://i.imgur.com/tskv8MM.png" width=55 height=40> |
+| [PR #16](https://github.com/RocketChat/apps.ai.gif/pull/16) | <b> [Feat] Enable GIF preview and add action buttons </b>  | <img src="https://i.imgur.com/tskv8MM.png" width=55 height=40> |
+| [PR #18](https://github.com/RocketChat/apps.ai.gif/pull/18) | <b> [Feat] Add Pagination in history </b>  | <img src="https://i.imgur.com/tskv8MM.png" width=55 height=40> |
+| [PR #22](https://github.com/RocketChat/apps.ai.gif/pull/22) | <b> [Feat] Support upload GIF to RC Channel </b>  | <img src="https://i.imgur.com/tskv8MM.png" width=55 height=40> |
+| [PR #23](https://github.com/RocketChat/apps.ai.gif/pull/23) | <b> [Feat] Add Help Command </b>  | <img src="https://i.imgur.com/tskv8MM.png" width=55 height=40> |
+| [PR #24](https://github.com/RocketChat/apps.ai.gif/pull/24) | <b> [Feat] Implement bot and add onInstall message </b>  | <img src="https://i.imgur.com/tskv8MM.png" width=55 height=40> |
+| [PR #26](https://github.com/RocketChat/apps.ai.gif/pull/26) | <b> [Bug] Fix app size too large to upload issue </b>  | <img src="https://i.imgur.com/tskv8MM.png" width=55 height=40> |
+
+</div>
+
+### Issues
+
+   
+<div align="center">
+    
+| Issue Link   | Description  | Status | 
+| :-----------: | :------------------------------------:| :------:|
+| [ISSUE #1](https://github.com/RocketChat/apps.ai.gif/issues/1) | <b>[CHORE] Initialize basic RC App Template</b> | <img src="https://i.imgur.com/ihaDyZS.png" width=55 height=40>
+| [ISSUE #2](https://github.com/RocketChat/apps.ai.gif/issues/2) | <b>[Feat] Generate GIF directly from RC Chat </b> | <img src="https://i.imgur.com/ihaDyZS.png" width=55 height=40>
+| [ISSUE #3](https://github.com/RocketChat/apps.ai.gif/issues/3) | <b>[Feat] Allow users to view past generations </b> | <img src="https://i.imgur.com/ihaDyZS.png" width=55 height=40>
+| [ISSUE #4](https://github.com/RocketChat/apps.ai.gif/issues/4) | <b>[Feat] Enhance user query using LLM as NLP </b> | <img src="https://i.imgur.com/ihaDyZS.png" width=55 height=40>
+| [ISSUE #9](https://github.com/RocketChat/apps.ai.gif/issues/9) | <b>[Feat] Add profanity filter to prompt and query </b> | <img src="https://i.imgur.com/ihaDyZS.png" width=55 height=40>
+| [ISSUE #10](https://github.com/RocketChat/apps.ai.gif/issues/10) | <b>[Feat] Allow users to pass custom prompt </b> | <img src="https://i.imgur.com/ihaDyZS.png" width=55 height=40>
+| [ISSUE #14](https://github.com/RocketChat/apps.ai.gif/issues/14) | <b>[Feat] Create a help command helping users to understand the app </b> | <img src="https://i.imgur.com/ihaDyZS.png" width=55 height=40>
+| [ISSUE #15](https://github.com/RocketChat/apps.ai.gif/issues/15) | <b>[Feat] Enable user to view GIF preview and provide options to regenerate/approve the generation </b> | <img src="https://i.imgur.com/ihaDyZS.png" width=55 height=40>
+| [ISSUE #17](https://github.com/RocketChat/apps.ai.gif/issues/17) | <b>[Feat] Allow pagination in history to support viewing more than 10 generations </b> | <img src="https://i.imgur.com/ihaDyZS.png" width=55 height=40>
+| [ISSUE #19](https://github.com/RocketChat/apps.ai.gif/issues/19) | <b>[Bug] Upload GIF's to RC as the provider may decide to remove the generated GIF after some specific amount of time </b> | <img src="https://i.imgur.com/ihaDyZS.png" width=55 height=40>
+| [ISSUE #20](https://github.com/RocketChat/apps.ai.gif/issues/20) | <b>[Feat] Send helper messages from app bot and add onInstall Message </b> | <img src="https://i.imgur.com/ihaDyZS.png" width=55 height=40>
+| [ISSUE #28](https://github.com/RocketChat/apps.ai.gif/issues/28) | <b>[Bug] Options block message not sent via bot user </b> | <img src="https://user-images.githubusercontent.com/70485812/189489748-ed27630f-36e7-4eb9-a9a4-e082d6894490.png" width=55 height=40>
+
+</div>
+
+## 💬 Connect With Me
+<div align="center">
+
+| **Student** | Aman Negi |
+|:--------------------|:-------------------|
+| **Organization** | [Rocket.Chat](https://rocket.chat/) |
+| **Project** | [AI in-channel GIF Image Generator](https://summerofcode.withgoogle.com/programs/2024/projects/41d12z0y) |
+| **GitHub** | [@amannegi](https://github.com/amannegi) |
+| **LinkedIn** | [Aman Negi](https://www.linkedin.com/in/aman-negi-3a1a221a9/) |
+| **Email** | <a href="mailto:asterjoules@gmail.com">asterjoules@gmail.com</a> |
+| **Rocket.Chat** | [aman.negi](https://open.rocket.chat/direct/aman.negi) |
+| **Project Github Repository** | [Apps.AI.GIF](https://github.com/RocketChat/Apps.AI.GIF) |
+       
+</div>
 
