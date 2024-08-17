@@ -8,14 +8,14 @@
 </p>
 
 ```
-                                       Generate GIF's directly from Rocket.Chat
+           Generate GIF's directly from Rocket.Chat
 ```
 
-## Project Abstract
+## Project Abstract 📑
 
 This project introduces an innovative Rocket.Chat application that allows communication between users through AI Generated GIFs. This empowers users to generate entirely original GIFs based on descriptive prompts, this app transcends the traditional GIF features of Rocket.Chat. It's integration into Rocket.Chat ensures a seamless experience allowing users to generate and send GIFs directly from Rocket.Chat. Users can either provide their own prompt or rely on an LLM generated prompt based on user query.
 
-## Deliverables
+## Deliverables 🛒
 
 1. **OnInstallation Message**: When user installs the `AI.GIF` app from the marketplace, they are introduced to the app via our bot. The welcome message explains the basics about the app what are the basic setup requirements and how to get started.
 2. **Helper Message**: Users can access the command `/gen-gif help` to get instructions on how to utilize the app and what all commands & features are available.
@@ -28,7 +28,7 @@ This project introduces an innovative Rocket.Chat application that allows commun
 
    
 
-## Demo
+## Demo 📹
 
 ### 1. OnInstallation Message:
 
@@ -82,7 +82,7 @@ One issue we faced was that RC atmost shows 10 items in preview, meanwhile we wa
 
 https://github.com/user-attachments/assets/8a4ed577-d093-4397-9c21-b3da0fa734e4
 
-## Contributions
+## Contributions 📈
 
 ### Pull Requests
 
@@ -127,7 +127,22 @@ https://github.com/user-attachments/assets/8a4ed577-d093-4397-9c21-b3da0fa734e4
 
 </div>
 
-## 💬 Connect With Me
+## Challenges we ran into 🔻
+
+Building this app has been quite challenging as I was introduced to the Apps Framework and the RC UI Kit(Fuselage). I learned how these could be utilized and how the Apps Framework worked with the main Rocket Chat server. Some specific issues that I remember are:
+
+1. **Repetitive requests issue**: This issue is quite common in most text based apps, where the frontend tries to call the backend for each request present. A common solution for this is debouncing and throttling. However, in my case the requirement was quite unique. Firstly, I needed to return a response and secondly I also needed to await it. By common convention, debouncing does not care about the cancelled request however I needed to care about them as well. Also, commonly any debounced function is not expected to be awaited however I required that as well. To resolve this issue, I created my own tailored implementation of debounced with Generics and Promises. You can learn more about it [here](https://medium.com/@asterjoules/resolving-repetitive-requests-issue-in-my-gsoc24-project-49eabd42c51b).
+2. **App not notified of all keystrokes**: This issue also involves text input, and the issue was that my app was not notified of all the keystrokes that the user made. Due to which after a point anything that user entered I couldn't get it. You can find more details about the issue [here](https://github.com/RocketChat/Rocket.Chat/issues/32650). To resovle this I thought maybe there was a issue in Apps Framework, however later I found the issue was that the frontend was trying to make too many requests to the backend. Due to this, all the upcoming requests were denied. I easily solved this issue in the main Rocket.Chat Framework using debouncing(the same function I implemented above). I have raised the PR([#32952](https://github.com/RocketChat/Rocket.Chat/pull/32952)) for this issue with necessary changes and hopefully it will get merged soon. 
+3. **Preview Title not showing up in preview component**: The issue here is that the preview title is taken in as a parameter for preview section, however it is not displayed. Currently, this is under consideration by the design team, and this will also be hopefully fixed soon! Learn more about it [here](https://github.com/RocketChat/Rocket.Chat/issues/32733).
+
+
+## Thanking Mentors 🤝✨
+
+I would like to express my sincere gratitude to my amazing mentor, [Nabhag Motivaras](https://www.linkedin.com/in/nabhag-motivaras-460b3b1aa/), for their invaluable guidance and support throughout this GSoC'24 journey. Their constant encouragement, technical expertise, and willingness to help have been instrumental in the success of this project. I am incredibly fortunate to have had the opportunity to learn from such a talented individual.
+
+A big thank you to the entire Rocket.Chat developer community for their openness and support throughout the development process.
+
+## Connect With Me 💬
 <div align="center">
 
 | **Student** | Aman Negi |
