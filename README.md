@@ -1,15 +1,11 @@
-# Documentation of Work done under GSoC'24
-![banner-ai-gif](https://github.com/user-attachments/assets/91cd3518-4a84-4064-b56a-00789f650dd1)
-
 <p align="center"> 
+    <h1 align="center"> Documentation of Work done under GSoC'24 </h1>
+   <img src="https://github.com/user-attachments/assets/acec34b3-441b-41f6-8eb7-fe8f09472a7a"/>
     <h1 align="center">
       <a href="https://summerofcode.withgoogle.com/programs/2024/projects/41d12z0y">✨ AI in-channel GIF Image Generator ✨</a>
     </h1>
+    <p align="center"> Generate GIF's directly from Rocket.Chat </p>
 </p>
-
-```
-           Generate GIF's directly from Rocket.Chat
-```
 
 ## Project Abstract 📑
 
@@ -28,7 +24,13 @@ This project introduces an innovative Rocket.Chat application that allows commun
 
    
 
-## Demo 📹
+## Demo 🖥️ 📷
+
+### Complete Video Walkthrough 📹
+
+  <a href="https://www.youtube.com/watch?v=oyDE3B5LDbY">
+    <img width="60%" src="https://github.com/user-attachments/assets/77bd0cc1-8c59-4e36-b2e6-d18cb7c4c7e7" alt="Link to demo on YouTube">
+  </a>
 
 ### 1. OnInstallation Message:
 
@@ -135,7 +137,7 @@ Building this app has been quite challenging as I was introduced to the Apps Fra
 2. **App not notified of all keystrokes**: This issue also involves text input, and the issue was that my app was not notified of all the keystrokes that the user made. Due to which after a point anything that user entered I couldn't get it. You can find more details about the issue [here](https://github.com/RocketChat/Rocket.Chat/issues/32650). To resovle this I thought maybe there was a issue in Apps Framework, however later I found the issue was that the frontend was trying to make too many requests to the backend. Due to this, all the upcoming requests were denied. I easily solved this issue in the main Rocket.Chat Framework using debouncing(the same function I implemented above). I have raised the PR([#32952](https://github.com/RocketChat/Rocket.Chat/pull/32952)) for this issue with necessary changes and hopefully it will get merged soon. 
 3. **Preview Title not showing up in preview component**: The issue here is that the preview title is taken in as a parameter for preview section, however it is not displayed. Currently, this is under consideration by the design team, and this will also be hopefully fixed soon! Learn more about it [here](https://github.com/RocketChat/Rocket.Chat/issues/32733).
 
-
+  
 ## Thanking Mentors 🤝✨
 
 I would like to express my sincere gratitude to my amazing mentor, [Nabhag Motivaras](https://www.linkedin.com/in/nabhag-motivaras-460b3b1aa/), for their invaluable guidance and support throughout this GSoC'24 journey. Their constant encouragement, technical expertise, and willingness to help have been instrumental in the success of this project. I am incredibly fortunate to have had the opportunity to learn from such a talented individual.
